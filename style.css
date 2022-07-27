@@ -11,7 +11,7 @@ body
   
   
   .chat {
-    height: calc(100% - 69px);
+    height: calc(100vh);
   }
   
   .chat-container {
