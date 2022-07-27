@@ -9,11 +9,6 @@ body
     height: 100vh;
   }
   
-  
-  .chat {
-    height: calc(100vh);
-  }
-  
   .chat-container {
     height: 100%;
   }
