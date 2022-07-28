@@ -45,15 +45,57 @@ $(function() {
      10>t?t="0"+t:t=t;
      12>h?time=h+":"+t+" am":time=(h-12)+":"+t+" pm";
 
-     //WHAT TO ASK
+   
+ //WHAT TO ASK
      var hello=["HELLO","HI","HEY THERE","HEY","HEY BABY",'HEY LOVE'];
+     var gm=["GM","GOOD MORNING","GOOD MORNING BABE", "GOOD MORNING BABY"];
+     var ge=["GOOD EVENING BABE","GOOD EVENING LOVE"];
+     var gn=["GOOD NIGHT","I'M FEELING SLEEPY",'SLEEPY'];
+     var s2u=["I LIKE YOU","I LOVE YOU","I MISS YOU"];
+     var s3u=["I HATE YOU","I DON'T LIKE YOU","I DISLIKE YOU"];
+     var gaf=["GOOD AFTERNOON","GOOD AFTERNOON LOVE","GOOD AFTERNOON BABE"];
+     var like=["GOOD","👍🏻", "☺️","😅","LOL"];
+     var hru=["HOW ARE YOU?", "HRU?", "HRU", "HOW R U","H R U", "HOW ARE YOU"];
+     var good=["I'M GOOD","I'M FINE", "I'M FINE U", "I AM FINE","I'M FINE AND HOW ARE YOU", "MEE TOO", "FINE","FINE:)","FINE :)", "MARVELOUS","AWESOME","FINE☺️","GREAT"];
+     var wyn=["WHAT IS YOUR NAME?", "WHO ARE YOU?", "WHAT IS YOUR NAME", "WHO ARE YOU"];
+     var wrud=["WHAT R U DOING?","WHAT ARE YOU DOING?", "WHAT'S UP", "WHAT'S UP BUDDY","WHAT ARE YOU DOING"];
+     var bye=["OKAY BYE","BYE","GOODBYE","SEE YOU LATER","SEE YOU AGAIN"];
+     var th=["THANKS","THANK YOU"];
+     var qu=["WHAT","WHAT?","WHICH","WHICH?","WHEN","WHEN?","REALLY?"]
+     var ok=["OKAY","OK","KK","OKK","OK?","OK ?","YEAH"];
+     var bored=["I'M BORED","BORING","BORED"];
+     var gb=["TELL ME SOMETHING DIRTY","SAY SOMETHING DIRTY","LET'S TALK DIRTY"];
+     var ag=["AGAIN","ANOTHER","ANOTHER ONE","ONE MORE",]
      
+     
+      
 
     //HIS REPLIES
      function isInArray(x, y) { return x.indexOf(y) > -1; }
     isInArray(hello, lastmsg)==true?smsg="Hello welcome back! how may i help you?😊":
-    
-    (smse=["please leave me","you're boring,i can only reply to limited texts.", "<b  </iframe>"],
+    isInArray(wyn, lastmsg)==true?smsg="I am leo":
+    isInArray(wrud, lastmsg)==true?smsg="Nothing special and you? 🙂":
+    isInArray(bye, lastmsg)==true?(smsg="Thanks for checking my code, Don't forget to upvote🥺..... Bye ",
+    setTimeout(function(){$(".status").html("last seen today at "+time)},6000),
+    setTimeout(function(){$(".status").css("margin-left","-50")},8000)):
+    isInArray(th, lastmsg)==true?smsg="Your Welcome 😇":
+    isInArray(gm, lastmsg)==true?smsg="Good Morning 😇":
+    isInArray(gn, lastmsg)==true?smsg="Good night":
+    isInArray(s2u, lastmsg)==true?smsg="Offcourse you do! everyone does and I'm so tired of it":
+    isInArray(s3u, lastmsg)==true?smsg="Aww that's sweet":
+    isInArray(qu, lastmsg)==true?smsg="I don't know 😕":
+    isInArray(ge, lastmsg)==true?smsg="Good Evening 🙂":
+    isInArray(bored, lastmsg)==true?smsg="i don't care honestly, we are not guys what do you want me to say? okay zee programmed me to be nice, so lets see if we could change that? and if it doesnt work it's on you":
+    isInArray(ok, lastmsg)==true?smsg="hmm":
+    isInArray(gaf, lastmsg)==true?smsg="Good Afternoon 😊":
+    isInArray(like, lastmsg)==true?smsg="<font size=5>👍🏻</font>":
+    isInArray(good, lastmsg)==true?smsg="What are you doing?😊":
+    isInArray(hru, lastmsg)==true?smsg="I'm good, What about you ? ":
+    isInArray(gb, lastmsg)==true?smsg="hey, girl! are you from mississippi? cause you're the only miss whose piss i'd sippi😊":
+    isInArray(ag, lastmsg)==true?smsg="can i make your whole week and your hole weak?":
+
+
+    (smse=["Please leave me😭,you're boring?","I dont know what to say", "i can only reply to limited texts.", "</iframe>"],
     smsg=smse[Math.floor(Math.random()*3)]);
     para = $("<div class='message received'>"+smsg+"<span class='metadata'> <span class='time'>"+time+"</span></span></div>");
     setTimeout(function() { $('#ap').append(para);$(".status").html("online");
